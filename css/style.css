@@ -1,0 +1,52 @@
+/* Global Elements */
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Header and Nav Bar */
+
+.main-header {
+  background: black;
+}
+
+h1 {
+  font-family: 'Monoton', Helvetica, sans-serif;
+  color: white;
+  font-weight: 200;
+  padding-left: 40px;
+}
+
+h1 span {
+  font-weight: 600;
+}
+
+.main-nav {
+  font-family: 'Audiowide', Helvetica, sans-serif;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: white;
+  padding-right: 50px;
+}
+
+.navigation li {
+
+}
+
+/* Flexbox Rules */
+
+.main-header,
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-header {
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
+}
