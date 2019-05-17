@@ -4,27 +4,29 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
 
 /* Main Header and Nav Bar */
 
 .main-header {
-  background: black;
+  background: #222;
 }
 
-h1 {
+.main-h1 {
   font-family: 'Monoton', Helvetica, sans-serif;
-  color: white;
+  color: #fff;
   font-weight: 200;
   margin: auto;
   align-content: center;
   /* padding-left: 75px; */
 }
 
-h1 span {
+.main-h1 span {
   font-weight: 600;
 }
-
 
 .main-nav {
   font-family: 'Audiowide', Helvetica, sans-serif;
@@ -32,16 +34,16 @@ h1 span {
 
 .main-nav li a {
   text-decoration: none;
-  color: white;
+  color: #FFF;
 }
-
 
 .navigation li {
   padding-right: 1em;
 }
 
 .navigation a:hover {
-  color: yellow;
+  color: 	#FFFFE0;
+  text-shadow: 0 2px 4px rgba(255,255,0,.8);
 }
 
 .navigation a:hover::after {
@@ -53,9 +55,10 @@ h1 span {
   display: block;
   width: 0;
   height: 5px;
-  background-color: yellow;
+  background-color: #FFFFE0;
   border-radius: 5px;
-  -webkit-transition: width 2s;
+  -webkit-transition: 300ms ease-out;
+  box-shadow: 0 2px 4px rgba(255,255,0,.8);
 }
 
 
@@ -63,6 +66,29 @@ h1 span {
 ul {
   padding-left: 16px;
 }
+
+/* Banner Rules */
+
+.banner {
+  flex: 1;
+}
+
+/* Footer Rules */
+
+.foot-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #222;
+  justify-content: center;
+}
+
+
+footer p {
+  color: #fff;
+  font-size: .75em;
+  margin: 0 1em;;
+}
+
 
 /* Flexbox Rules */
 
@@ -79,5 +105,4 @@ ul {
 
 .navigation {
   justify-content: space-around;
-
 }
