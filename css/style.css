@@ -16,12 +16,15 @@ h1 {
   font-family: 'Monoton', Helvetica, sans-serif;
   color: white;
   font-weight: 200;
-  padding-left: 40px;
+  margin: auto;
+  align-content: center;
+  /* padding-left: 75px; */
 }
 
 h1 span {
   font-weight: 600;
 }
+
 
 .main-nav {
   font-family: 'Audiowide', Helvetica, sans-serif;
@@ -30,11 +33,35 @@ h1 span {
 .main-nav li a {
   text-decoration: none;
   color: white;
-  padding-right: 50px;
 }
 
-.navigation li {
 
+.navigation li {
+  padding-right: 1em;
+}
+
+.navigation a:hover {
+  color: yellow;
+}
+
+.navigation a:hover::after {
+  width: 100%;
+}
+
+.navigation a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 5px;
+  background-color: yellow;
+  border-radius: 5px;
+  -webkit-transition: width 2s;
+}
+
+
+
+ul {
+  padding-left: 16px;
 }
 
 /* Flexbox Rules */
@@ -46,7 +73,11 @@ h1 span {
 }
 
 .main-header {
-  justify-content: space-between;
   flex-direction: column;
   align-content: center;
+}
+
+.navigation {
+  justify-content: space-around;
+
 }
