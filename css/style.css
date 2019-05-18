@@ -71,6 +71,7 @@ ul {
 
 .banner {
   flex: 1;
+  justify-content: center;
 }
 
 /* Footer Rules */
@@ -82,18 +83,23 @@ ul {
   justify-content: center;
 }
 
+footer img {
+  width: 25px;
+  height: 25px;
+  margin-left: 1em;
+}
 
 footer p {
   color: #fff;
   font-size: .75em;
-  margin: 0 1em;;
+  margin: 0 1em .5em;
 }
-
 
 /* Flexbox Rules */
 
 .main-header,
-.navigation {
+.navigation,
+.banner {
   display: flex;
   flex-wrap: wrap;
 }
