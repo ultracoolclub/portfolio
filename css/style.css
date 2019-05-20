@@ -12,7 +12,7 @@ body {
 /* Main Header and Nav Bar */
 
 .main-header {
-  background: #202023;
+  background: #202020;
 }
 
 .main-h1 {
@@ -21,7 +21,7 @@ body {
   font-weight: 200;
   margin: auto;
   align-content: center;
-  /* padding-left: 75px; */
+  font-size: 6.5em;
 }
 
 .main-h1 span {
@@ -92,21 +92,21 @@ ul {
 .foot-container {
   display: flex;
   flex-wrap: wrap;
-  background: #202023;
-  justify-content: center;
+  background: #202020;
   padding-top: 5px;
+  justify-content: center;
 }
 
 footer img {
-  width: 25px;
-  height: 25px;
-  margin-left: 1em;
+  width: 100px;
+  height: 100px;
+  margin-left: .48em;
 }
 
 footer p {
   color: #fff;
-  font-size: .75em;
-  margin: 0 1em .5em;
+  font-size: 1.5em;
+  margin: 0 100px .5em;
 }
 
 /* Flexbox Rules */
