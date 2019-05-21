@@ -13,7 +13,7 @@ body {
 
 .main-header {
   background: #202020;
-  min-width: 800px;
+  min-width: 400px;
 }
 
 .main-h1 {
@@ -23,8 +23,8 @@ body {
   color: #fff;
   font-weight: 200;
   margin: auto;
-  align-content: center;
-  font-size: 6.5em;
+  justify-content: center;
+  font-size: 5.5em;
 }
 
 .main-h1 span {
@@ -81,7 +81,7 @@ ul {
 }
 
 .banner a {
-  height: 78.9vh;
+  height: 57vh;
 
 }
 
@@ -101,15 +101,15 @@ ul {
 }
 
 footer img {
-  width: 100px;
-  height: 100px;
-  margin-left: .48em;
+  width: 75px;
+  height: 75px;
+  margin-left: 1.2em;
 }
 
 footer p {
   color: #fff;
-  font-size: 1.5em;
-  margin: 0 100px .5em;
+  font-size: 1.25em;
+  margin: 0 100px 1em;
 }
 
 /* Flexbox Rules */
@@ -128,4 +128,12 @@ footer p {
 
 .navigation {
   justify-content: space-around;
+}
+
+
+/* Media Queries */
+
+/*  */
+
+
 }
