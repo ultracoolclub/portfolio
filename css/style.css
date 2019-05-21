@@ -13,15 +13,19 @@ body {
 
 .main-header {
   background: #202020;
+  min-width: 800px;
 }
 
 .main-h1 {
+  display: flex;
+  flex-wrap: wrap;
   font-family: 'Monoton', Helvetica, sans-serif;
   color: #fff;
   font-weight: 200;
   margin: auto;
   align-content: center;
   font-size: 6.5em;
+
 }
 
 .main-h1 span {
