@@ -13,14 +13,14 @@ body {
 /* Main Header and Nav Bar */
 
 .main-header {
-  background: #202020;
+  background: #fff;
 }
 
 .main-h1 {
   display: flex;
   flex-wrap: wrap;
   font-family: 'Monoton', Helvetica, sans-serif;
-  color: #fff;
+  color: #202020;
   font-weight: 200;
   margin: auto;
   justify-content: center;
@@ -50,17 +50,15 @@ body {
   position: absolute;
 }
 
-.navIcon:hover {
-  color: #FFFFE0;
-}
 
 #dropMenu ul {
   display: none;
-  background-color: #202020
+  background-color: #202020;
+  margin-top: 20px;
 }
 
 #dropMenu:hover ul {
-  display: flex;
+  display: block;
   flex-direction: column;
   position: fixed;
 }
@@ -124,8 +122,6 @@ ul {
   background: #202023;
 }
 
-
-
 .banner img {
   width: 100%;
   height: 80vh; 
@@ -136,7 +132,7 @@ ul {
 .foot-container {
   display: flex;
   flex-wrap: wrap;
-  background: #202020;
+  background: #fff;
   justify-content: center;
   padding-top: 5px;
 }
@@ -147,7 +143,7 @@ footer img {
 }
 
 footer p {
-  color: #fff;
+  color: #202020;
   font-size: .75em;
 }
 
@@ -159,44 +155,43 @@ footer p {
 
 .contact {
   display: flex;
+  flex-wrap: wrap;
   flex: 1;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #202020;
 }
 
-/* 
+
 .contact-form {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  margin-bottom: 17.5px;
-  border: white;
+  padding: 0 3px 3px 3px;
+  padding-top: 25px;
 }
 
-#message {
-  flex-grow: 2;
-}
 
 #name,
 #email,
 #message,
 #contactButton {
-  border-radius: 5px;
-  height: 10%;
-  font-size: 4em;
+  border-radius: 5px;S
 }
 
 #contact-h1,
 #contact-h2 {
   color: white;
   font-family: 'Audiowide', Helvetica, sans-serif;
-  font-size: 4em;
-  margin-left: 100px;
-} */
+  align-self: center;
+}
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 
 /*//////// Portfolio Rules //////////////////////*/
@@ -228,19 +223,38 @@ footer p {
   flex-wrap: wrap;
 }
 
-.services h1 {
-  color: white;
-}
-
 .services p {
   color: white;
   width: 80%;
+  margin-top: 75px;
 }
 
 #servicesBtn {
-  width: 80%;
-  height: 2em;
-  font-size: 4em;
+  border-radius: 50%;
+  height: 4em;
+  margin-top: 35px;
+}
+
+#survey-wrapper {
+  display: none;
+}
+
+#survey {
+  display: none;
+}
+
+#survey-wrapper.active {
+  display: block;
+}
+
+#survey.active {
+  display: block;
+}
+
+#survey-wrapper {
+  background-color: #202020;
+  margin-top: 15%;
+
 }
 
 /* Flexbox Rules */

@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Electric_Goon | A Portfolio</title>
   </head>
   <body>
@@ -12,27 +13,28 @@
     <div class="wrapper">
       <header class="main-header">
         <h1 class="main-h1">Electric<span>Goon</span></h1>
-        <nav class="main-nav">
-          <ul class="navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+        <div id="dropMenu">
+          <div class="navIcon">&#9776; Menu</div>
+          <nav class="main-nav">
+            <ul class="navigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
     </div>
     <!-- Services -->
     <div class="services">
-      <h1>Let's get started!</h1>
-      <p>Press the button below (the big one that says "button") and fill out a
-      short form. It will let me know what your individual needs are, whether you
-      want a website for you home business or a mobile app you know will be a hit.
-      Or maybe you have something totally unique in mind.</p>
-      <p>Feel free to only fill out the contact information and I'll be in touch
-      as soon as I can. The rest of the questions just give me an idea about your
-      personality and style. That way I can start brainstorming before your free
-      consultation.</p>
+      <p>Press the button below and fill out a short form. It will let me know what your individual needs are, whether you
+      want a website for your home business or a mobile app you know will be a hit.</p>
+
+      <div id="survey-wrapper">
+        <h1 id="survey">pop up</h1>
+        <button id="closeBtn">close</button>
+      </div>
 
       <button id="servicesBtn" type="button" name="button">button</button>
     </div>
@@ -51,8 +53,10 @@
         </div>
         <p>&COPY; 2019 Electric Goon, Inc.</p>
       </footer>
-
     </div>
-
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
