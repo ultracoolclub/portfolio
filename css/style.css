@@ -113,6 +113,7 @@ ul {
   flex: 1;
   box-shadow: inset 0 0 50px 10px rgba(34,34,34,1);
   background: #202023;
+  overflow: hidden;
 }
 
 .banner img {
@@ -173,7 +174,7 @@ footer p {
 #email,
 #message,
 #contactButton {
-  border-radius: 5px;S
+  border-radius: 5px;
 }
 
 #contact-h1,
@@ -365,6 +366,10 @@ footer p {
     margin: 0;
   }
 
+  .banner {
+    
+  }
+
   .navigationLarge {
     display: flex;
     padding-top: 23px;
@@ -408,11 +413,4 @@ footer {
     margin-right: 0;
   }
 
-
-  .headWrap {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-between;
-  }
 }
