@@ -356,6 +356,11 @@ footer p {
     display: none;
   }
 
+  .main-header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   .main-h1 {
     margin: 0;
   }
@@ -382,7 +387,7 @@ footer p {
   }
 
 .foot-container {
-  display: inline-flex;
+  display: inline;
 }
 
 footer {
