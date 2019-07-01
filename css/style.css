@@ -1,4 +1,4 @@
-/* Global Elements */
+/*////Body/Global Variables//////////////////*/
 
 body {
   width: 100%;
@@ -10,14 +10,15 @@ body {
   box-sizing: border-box;
 }
 
-/* Main Header and Nav Bar */
+/*////Header//////////////////*/
 
 .main-header {
   background: #2988B8;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
-
 
 .main-h1 {
   display: flex;
@@ -33,6 +34,8 @@ body {
 .main-h1 span {
   font-weight: 600;
 }
+
+/*////Navigation Bar//////////////////*/
 
 .navIcon {
   color: #FFFFE0;
@@ -70,6 +73,10 @@ body {
   color: #FFFFE0;
 }
 
+.navigationLarge {
+  display: none;
+}
+
 .navigation li,
 .navigationLarge li {
   padding-right: 1em;
@@ -99,14 +106,12 @@ body {
   position: absolute;
 }
 
-
-
 ul {
   padding-left: 16px;
   list-style-type: none;
 }
 
-/* Banner Rules */
+/*////Banner/Picture//////////////////*/
 
 .banner {
   display: flex;
@@ -121,7 +126,7 @@ ul {
   height: 80vh; 
 }
 
-/* Footer Rules */
+/*////Footer//////////////////*/
 
 .foot-container {
   display: flex;
@@ -148,7 +153,7 @@ footer p {
   margin-left: 7.5px;
 }
 
-/* Contact Rules */
+/*////Contact//////////////////*/
 
 .contact {
   display: flex;
@@ -191,7 +196,7 @@ footer p {
 }
 
 
-/*//////// Portfolio Rules //////////////////////*/
+/*////Portfolio//////////////////*/
 
 .portfolio {
   flex: 1;
@@ -211,7 +216,9 @@ footer p {
   margin-top: 50px;
 }
 
-/*////////// Services Rules ///////////////////////*/
+/*///////////////////////////////*/
+/*////Services//////////////////*/
+/*/////////////////////////////*/
 
 .services {
   display: flex;
@@ -280,32 +287,13 @@ footer p {
   margin-bottom: 15px;
 }
 
-.navigationLarge {
-  display: none;
-}
+/*////////////////////////////////*/
+/*////Media Queries//////////////*/
+/*//////////////////////////////*/
 
-/* Flexbox Rules */
-
-.main-header,
-.navigation,
-.banner {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.main-header {
-  flex-direction: column;
-  align-content: center;
-}
-
-.navigation {
-  justify-content: space-around;
-}
-
-
-/* Media Queries */
-
-/*  */
+/*////////////////////////////////*/
+/*////Max-350px//////////////////*/
+/*//////////////////////////////*/
 
 @media (max-width: 350px) {
 
@@ -315,19 +303,13 @@ footer p {
 
 }
 
+/*////////////////////////////////*/
+/*////Min-700px//////////////////*/
+/*//////////////////////////////*/
+
 @media (min-width: 700px) {
 
-  .services p {
-    width: 60%;
-  }
-
-  #servicesBtn {
-    width: 60%;
-  }
-
-    div .dropMenu {
-    display: none;
-  }
+/*////Header///////////////////*/
 
   .headWrap {
     display: flex;
@@ -339,6 +321,8 @@ footer p {
     margin: 0;
   }
 
+/*////Navigation//////////////////*/
+
   .navigationLarge {
     display: flex;
     padding-top: 23px;
@@ -349,13 +333,29 @@ footer p {
     position: relative;
   }
 
-}
-
-@media (min-width: 1150px) {
-
   div .dropMenu {
     display: none;
   }
+
+/*////Services//////////////////*/
+
+  .services p {
+    width: 60%;
+  }
+
+  #servicesBtn {
+    width: 60%;
+  }
+
+}
+
+/*////////////////////////////////*/
+/*////Min-1150px/////////////////*/
+/*//////////////////////////////*/
+
+@media (min-width: 1150px) {
+
+/*////Header//////////////////*/
 
   .main-header {
     flex-direction: row;
@@ -366,8 +366,10 @@ footer p {
     margin: 0;
   }
 
-  .banner {
-    
+/*////Navigation//////////////////*/
+
+  div .dropMenu {
+    display: none;
   }
 
   .navigationLarge {
@@ -378,6 +380,8 @@ footer p {
   .navigationLarge a::after {
     position: relative;
   }
+
+/*////Services//////////////////*/
 
   #servicesBtn {
     margin: auto;
@@ -391,21 +395,23 @@ footer p {
     margin-top: 75px;
   }
 
-.foot-container {
-  display: inline;
-}
+/*////Footer//////////////////*/
 
-footer {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
+  .foot-container {
+    display: inline;
   }
 
-.footWrap {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-}
+  footer {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .footWrap {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+  }
 
   footer p,
   .footLinks {
