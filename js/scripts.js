@@ -7,11 +7,17 @@ var footer = document.querySelector('.foot-container');
 var services = document.querySelector('.services');
 
 
+
+
+
+
+
+
 /* This fixes the "sticky hover" in the menu when using touch-screen devices. */
 
 $(document).ready(function () {
   $(".navIcon").click(function () {
-    $(".navigation").toggle();
+    $(".dropMenu ul").toggle();
   });
 });
 

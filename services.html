@@ -12,11 +12,20 @@
     <!-- Main Header and Navigation -->
     <div class="wrapper">
       <header class="main-header">
-        <h1 class="main-h1">Electric<span>Goon</span></h1>
-        <div id="dropMenu">
-          <div class="navIcon">&#9776; Menu</div>
+        <div class="headWrap">
+          <h1 class="main-h1">Electric<span>Goon</span></h1>
+      
           <nav class="main-nav">
+            <div class="dropMenu">
+            <div class="navIcon">&#9776; Menu</div>
             <ul class="navigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+            <ul class="navigationLarge">
               <li><a href="index.html">Home</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
               <li><a href="services.html">Services</a></li>
@@ -28,20 +37,44 @@
     </div>
     <!-- Services -->
     <div class="services">
-      <p>Press the button below and fill out a short form. It will let me know what your individual needs are, whether you
-      want a website for your home business or a mobile app you know will be a hit.</p>
-
+        <p>Press the button below and fill out a short form. It will let me know what your individual needs are, whether you
+        want a website for your home business or a mobile app you know will be a hit.</p>
+        <button id="servicesBtn" type="button" name="button">Questionnaire</button>
       <div id="survey-wrapper">
-        <h1 id="survey">pop up</h1>
-        <button id="closeBtn">close</button>
+        <form action="services.html" method="post">
+            <h2 id="survey">Questionnaire</h2>
+            <div class="survey-content">
+                <input type="text" placeholder="Name:"><br>
+                <input type="text" placeholder="Number:"><br>
+                <input type="text" placeholder="Email:"><br>
+              <h3>Choose a service.</h3>
+                <input type="checkbox" name="service1" value="website">Website
+                <input type="checkbox" name="service2" value="mobile-app">Mobile App
+                <input type="checkbox" name="service3" value="content-management">Content Management<br>
+              <h3>What will you use this for?</h3>
+                <input type="checkbox" name="option1" value="personal">Personal
+                <input type="checkbox" name="option2" value="professional">Professional
+                <input type="checkbox" name="option3" value="hobby">Hobby<br>
+              <h3>Will you be selling anything?</h3>
+                <input type="checkbox" name="yes" value="yes">Yes
+                <input type="checkbox" name="no" value="no">No<br>
+              <h3>Favorite Patrick Swayze movie?</h3>
+                <input type="checkbox" name="dirtyDancing" value="dirtyDancing"><img id="dirtyDancing" src="img/dirty_dancing.png" alt="Movie poster of Dirty Dancing">
+                <input type="checkbox" name="roadhouse" value="roadhouse"><img id="roadhouse" src="img/roadhouse.png" alt="Movie poster of Roadhouse">
+            </div>
+            <button id="closeBtn">Submit</button>
+        </form>
+        
       </div>
 
-      <button id="servicesBtn" type="button" name="button">button</button>
+      
     </div>
 
     <div class="foot-container">
 
+      
       <footer>
+        <div class="footWrap">
         <div class="footLinks">
           <a href="https://www.instagram.com/electric_goon/" target="_blank"><img src="img/instagram96px.png"
               alt="Instagram Logo"></a>
@@ -52,11 +85,10 @@
               alt="Linkedin Logo"></a>
         </div>
         <p>&COPY; 2019 Electric Goon, Inc.</p>
+        </div>
       </footer>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
