@@ -36,43 +36,79 @@
       </header>
     </div>
     <!-- Services -->
-    <div class="services">
-        <p>Press the button below and fill out a short form. It will let me know what your individual needs are, whether you
-        want a website for your home business or a mobile app you know will be a hit.</p>
-        <button id="servicesBtn" type="button" name="button">Questionnaire</button>
-      <div id="survey-wrapper">
-        <form action="services.html" method="post">
-            <h2 id="survey">Questionnaire</h2>
-            <div class="survey-content">
-                <input type="text" placeholder="Name:"><br>
-                <input type="text" placeholder="Number:"><br>
-                <input type="text" placeholder="Email:"><br>
-              <h3>Choose a service.</h3>
-                <input type="checkbox" name="service1" value="website">Website
-                <input type="checkbox" name="service2" value="mobile-app">Mobile App
-                <input type="checkbox" name="service3" value="content-management">Content Management<br>
-              <h3>What will you use this for?</h3>
-                <input type="checkbox" name="option1" value="personal">Personal
-                <input type="checkbox" name="option2" value="professional">Professional
-                <input type="checkbox" name="option3" value="hobby">Hobby<br>
-              <h3>Will you be selling anything?</h3>
-                <input type="checkbox" name="yes" value="yes">Yes
-                <input type="checkbox" name="no" value="no">No<br>
-              <h3>Favorite Patrick Swayze movie?</h3>
-                <input type="checkbox" name="dirtyDancing" value="dirtyDancing"><img id="dirtyDancing" src="img/dirty_dancing.png" alt="Movie poster of Dirty Dancing">
-                <input type="checkbox" name="roadhouse" value="roadhouse"><img id="roadhouse" src="img/roadhouse.png" alt="Movie poster of Roadhouse">
-            </div>
-            <button id="closeBtn">Submit</button>
-        </form>
-        
-      </div>
 
-      
+    <div class="services">
+      <div class="btnWrap">
+        <p id="paraServices">
+          Let me build your website. To get started, click the button 
+          below and answer a few questions. 
+        </p>
+        
+        <button id="servicesBtn" type="button" name="button">Survey</button>
+      </div>
+      <div>
+        <form class="survey" action="services.html" method="post">
+          <div id="surveyForm">
+            <h2>Questionnaire</h2>
+            <input type="text" placeholder="Name:"><br>
+            <input type="text" placeholder="Number:"><br>
+            <input type="text" placeholder="Email:"><br>
+            <button id="closeBtn" type="button" name="closer">Submit</button>
+          </div>
+        </form>        
+      </div>
+      <div>
+        <div id="questionOne">
+          <div class="personalInfo">
+            <form action="services.html" method="POST">
+              <h3>What do you need?</h3>
+              <input type="checkbox" name="service1" value="website">Website
+              <input type="checkbox" name="service2" value="mobile-app">Mobile App
+              <input type="checkbox" name="service3" value="content-management">Content Management<br>
+            </form>
+            <button id="next1" type="button" name="next1">Next</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="questionTwo">
+          <div class="serviceNeeds">
+            <form action="services.html" method="POST">
+              <h3>What will you use it for?</h3>
+              <input type="checkbox" name="option1" value="personal">Personal
+              <input type="checkbox" name="option2" value="professional">Professional
+              <input type="checkbox" name="option3" value="hobby">Hobby<br>
+            </form>
+            <button id="next2" type="button" name="next1">Next</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="questionThree">
+          <div class="serviceIntent">
+            <form action="services.html" method="POST">
+              <h3>Will you be selling anything?</h3>
+              <input type="checkbox" name="yes" value="yes">Product(s)
+              <input type="checkbox" name="no" value="no">Service(s)
+              <input type="checkbox" name="no" value="no">Nothing
+            </form>
+            <button id="next3" type="button" name="next1">Next</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="closeMessage" action="services.html" method="post">      
+          <div class="wrapClose">
+            <p>
+              Thanks! You'll hear from me shortly.
+            </p>
+            <button id="closeSurvey" type="button" name="closebutton">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="foot-container">
-
-      
+    <div class="foot-container">      
       <footer>
         <div class="footWrap">
         <div class="footLinks">

@@ -1,19 +1,21 @@
-var contactSubmit = document.getElementById('contactButton');
+var contactSubmit = document.querySelector('#contactButton');
 var contactInfo = document.querySelector('form');
 var servicesBtn = document.querySelector('#servicesBtn');
 var mainHeader = document.querySelector('.wrapper');
 var h1Services = document.querySelector('.services p');
 var footer = document.querySelector('.foot-container');
-var services = document.querySelector('.services');
+var services = document.querySelectorAll('.survey');
+var closeMessage = document.querySelector('.wrapClose');
+var closeBtn = document.querySelector('#closeBtn');
+var contactName = document.getElementById('#name');
+var clientNam = document.write('#name');
 
 
 
 
-
-
-
-
-/* This fixes the "sticky hover" in the menu when using touch-screen devices. */
+/*////////////////////////////////////////////////////////*/
+/*////Allows drop-down menu to function//////////////////*/
+/*//////////////////////////////////////////////////////*/
 
 $(document).ready(function () {
   $(".navIcon").click(function () {
@@ -21,39 +23,75 @@ $(document).ready(function () {
   });
 });
 
-/* This allows a popup survey to appear on the services page*/
+/*///////////////////////////////////////////////////////////////////////////////////////////*/
+/*////Allows popup survey to appear when "questionnaire" button is pressed//////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////*/
+
 
 $(document).ready(function () {
   $("#servicesBtn").click(function () {
-    $("#survey-wrapper, #survey").addClass("active");
-    servicesBtn.style.display = "none";
-    mainHeader.style.display = "none";
-    h1Services.style.display = "none";
-    footer.style.display = "none";
-    services.style.background = "white";
+    $(".survey").show();
   });
-
   $("#closeBtn").click(function () {
-    $("#survey-wrapper, #survey").removeClass("active");
-    servicesBtn.style.display = "block";
-    mainHeader.style.display = "block";
-    h1Services.style.display = "flex";
-    footer.style.display = "flex";
-    services.style.background = "#202020";
+    $(".survey").hide();
+    $("#questionOne").show();
+  });
+  $("#next1").click(function () {
+    $("#questionOne").hide();
+    $("#questionTwo").show();
+  });
+  $("#next2").click(function () {
+    $("#questionTwo").hide();
+    $("#questionThree").show();
+  });
+  $("#next3").click(function () {
+    $("#questionThree").hide();
+    $("#closeMessage").show();
+  });
+  $("#closeSurvey").click(function () {
+    $("#closeMessage").hide();
   });
 });
 
-/* This makes a message appear after clicking 'submit' on the contact page. */
 
-contactSubmit.addEventListener('click', ()=> {
 
-  contactInfo.textContent = "Thanks. I'll talk to you soon.";
-  contactInfo.style.color = "white";
-  contactInfo.style.fontSize = "3em";
-  contactInfo.style.padding = "0 20px 0 20px";
-});
 
-/* Services Button */
+
+
+
+/*/////////////////////////////////////////////////////////////////////*/
+/*////Submits form on contact page. Message appears.//////////////////*/
+/*///////////////////////////////////////////////////////////////////*/
+
+
+
+function insertName() {
+  var unoName = document.querySelector('#name').value;
+  var contactMessage = "Thanks, " + unoName + ". You'll hear from me shortly.";
+
+  document.querySelector("form").innerHTML = contactMessage;
+}
+
+contactSubmit.addEventListener('click', insertName);
+
+
+
+
+
+
+
+
+
+
+// contactSubmit.addEventListener('click', ()=> {
+  
+
+//   contactInfo.textContent = "Thanks. " + clientName + " I'll talk to you soon.";
+//   contactInfo.style.color = "white";
+//   contactInfo.style.fontSize = "3em";
+//   contactInfo.style.padding = "0 20px 0 20px";
+
+// });
 
 
 

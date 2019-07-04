@@ -7,7 +7,7 @@ body {
   display: flex;
   height: 100vh;
   flex-direction: column;
-  box-sizing: border-box;
+  background-color: #202020;
 }
 
 /*////Header//////////////////*/
@@ -134,7 +134,15 @@ ul {
   background:#202020;
   justify-content: center;
   padding-top: 5px;
-  margin-top: 1px;
+}
+
+.foot-container::before {
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: #FFFFE0;
+  margin-bottom: 3px;
 }
 
 footer img {
@@ -163,6 +171,7 @@ footer p {
   align-items: center;
   justify-content: center;
   background-color: #202020;
+  font-family: 'Audiowide';
 }
 
 
@@ -171,7 +180,6 @@ footer p {
   justify-content: space-around;
   flex-direction: column;
   padding: 0 3px 3px 3px;
-  padding-top: 25px;
 }
 
 
@@ -221,71 +229,112 @@ footer p {
 /*/////////////////////////////*/
 
 .services {
+  height: 100%;
+}
+
+.survey {
+  display: none;
+  z-index: 999;
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  left: 0;
+}
+
+#surveyForm {
   display: flex;
-  flex: 1;
   flex-direction: column;
-  align-items: center;
-  background-color: #202020;
-  font-family: 'Audiowide', Helvetica, sans-serif;
-  font-size: 1.5em;
-  flex-wrap: wrap;
+  background: salmon;
+  width: 70%;
+  height: 30%;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 10%;
+  box-shadow: 0 0 15px rgba(34,34,34,1);
+  animation-name: survey;
+  animation-duration:1.5s;
+  font-size: .75em;
 }
 
-.services p {
+#closeMessage {
   color: white;
-  width: 79%;
-  margin-top: 75px;
 }
 
+
+@keyframes survey {
+  from { transform: translateY(-900px)}
+  to { transform: translateY(0)}
+}
+
+.btnWrap {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Audiowide';
+  }
+
+#paraServices {
+  color: rgb(247, 247, 157);
+}
+ 
 #servicesBtn {
-  font-family: 'Audiowide', sans-serif;
-  width: 79%;
-  margin-bottom: 10px;
-  background:  #2988B8;
-  border: solid 2px #fff; 
+  background: #2988B8; 
 }
 
-#survey-wrapper {
-  display: none;
-}
-
-#survey {
-  display: none;
-  background-color: bisque;
-  margin: 0;
-  padding: 0;
-}
-
-#survey-wrapper.active {
-  display: block;
-}
-
-#survey.active {
+.personalInfo,
+.serviceNeeds,
+.serviceIntent,
+.wrapClose {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  background: #2988B8;
+  width: 70%;
+  height: 30%;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 10%;
+  box-shadow: 0 0 15px rgba(34,34,34,1);
+  animation-name: modalTwo;
+  animation-duration: 2s;
+  border-radius: 5px;
 }
 
-#survey-wrapper {
-  box-shadow: 5px 5px 5px;
-  border: solid 1px #202023;
-  margin-bottom: 10px;
+@keyframes modalTwo {
+  from { top: 500px; opacity: 0;}
+  to { top: 0; opacity: 1;}
 }
 
-.survey-content {
-  padding: 0 10px 0 5px;
+#closeMessage {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  left: 0;
 }
 
-#dirtyDancing,
-#roadhouse {
-  height: 9.37em;
-  width: 5.625em;
+#questionOne,
+#questionTwo,
+#questionThree,
+#closeMessage {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  left: 0;
 }
 
-#closeBtn {
-  margin-left: 41%;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
 
 /*////////////////////////////////*/
 /*////Media Queries//////////////*/
