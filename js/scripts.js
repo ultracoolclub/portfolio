@@ -65,34 +65,16 @@ $(document).ready(function () {
 
 
 
-function insertName() {
-  var unoName = document.querySelector('#name').value;
-  var contactMessage = "Thanks, " + unoName + ". You'll hear from me shortly.";
+// function insertName() {
+//   var unoName = document.querySelector('#firstName').value;
+//   var contactMessage = "Thanks, " + unoName + ". You'll hear from me shortly.";
+//   document.querySelector("form").style.color = "white";
 
-  document.querySelector("form").innerHTML = contactMessage;
-}
-
-contactSubmit.addEventListener('click', insertName);
-
-
-
-
-
-
-
-
-
-
-// contactSubmit.addEventListener('click', ()=> {
+//   document.querySelector("form").innerHTML = contactMessage;
   
+// }
 
-//   contactInfo.textContent = "Thanks. " + clientName + " I'll talk to you soon.";
-//   contactInfo.style.color = "white";
-//   contactInfo.style.fontSize = "3em";
-//   contactInfo.style.padding = "0 20px 0 20px";
-
-// });
-
+// contactSubmit.addEventListener('click', insertName);
 
 
 
