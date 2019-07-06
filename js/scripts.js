@@ -8,7 +8,7 @@ var services = document.querySelectorAll('.survey');
 var closeMessage = document.querySelector('.wrapClose');
 var closeBtn = document.querySelector('#closeBtn');
 var contactName = document.getElementById('#name');
-var clientNam = document.write('#name');
+
 
 
 
@@ -65,16 +65,16 @@ $(document).ready(function () {
 
 
 
-// function insertName() {
-//   var unoName = document.querySelector('#firstName').value;
-//   var contactMessage = "Thanks, " + unoName + ". You'll hear from me shortly.";
-//   document.querySelector("form").style.color = "white";
+function insertName() {
+  var unoName = document.querySelector('#firstName').value;
+  var contactMessage = "Thanks, " + unoName + ". You'll hear from me shortly.";
+  document.querySelector("form").style.color = "white";
 
-//   document.querySelector("form").innerHTML = contactMessage;
+  document.querySelector("form").innerHTML = contactMessage;
   
-// }
+}
 
-// contactSubmit.addEventListener('click', insertName);
+contactSubmit.addEventListener('click', insertName);
 
 
 

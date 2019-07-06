@@ -3,11 +3,9 @@
 
 body {
   width: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
   background-color: #202020;
 }
 
@@ -24,16 +22,17 @@ body {
 .main-h1 {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   font-family: 'Monoton', Helvetica, sans-serif;
   color: #202020;
   font-weight: 200;
   margin: auto;
-  justify-content: center;
   font-size: 4em;
 }
 
 .main-h1 span {
   font-weight: 600;
+  margin: auto;
 }
 
 /*////Navigation Bar//////////////////*/
@@ -54,7 +53,7 @@ body {
   margin-top: 30px;
   z-index: 1;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
 }
 
 .dropMenu ul li {
@@ -103,7 +102,7 @@ body {
   height: 5px;
   background-color: #FFFFE0;
   border-radius: 5px;
-  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
   box-shadow: 0 2px 4px rgba(255,255,0,.8);
   position: absolute;
 }
@@ -118,14 +117,14 @@ ul {
 .banner {
   display: flex;
   flex: 1;
-  height: ;
+  height: 81vh;
   background: #202023;
 }
 
 
 .banner img {
   width: 100%;
-  height: ; 
+  height: 81vh; 
 }
 
 
@@ -134,26 +133,23 @@ ul {
 .foot-container {
   display: flex;
   flex-wrap: wrap;
-  background:#202020;
-  padding: 1em 0;
+  position: relative;
 }
 
-/* .foot-container::before {
+.foot-container::before {
   content: '';
   display: flex;
   width: 100%;
   height: 1px;
   background-color: #FFFFE0;
   margin-bottom: 0;
-} */
+}
 
 footer {
   display: flex;
-  margin-top: 3px;
-}
-
-.footWrap {
-  position: absolute;
+  margin: auto;
+  margin-top: 5px;
+  padding-bottom: 5px;
 }
 
 footer img {
@@ -165,10 +161,12 @@ footer p {
   color: #fff;
   font-size: .75em;
   margin: auto;
+  
 }
 
 .footLinks {
   margin: auto;
+  margin-top: px;
   margin-left: 7.5px;
 }
 
@@ -183,6 +181,7 @@ footer p {
   justify-content: center;
   background-color: #202020;
   font-family: 'Audiowide';
+  height: 81vh;
 }
 
 .contact-form {
@@ -190,6 +189,8 @@ footer p {
   justify-content: space-around;
   flex-direction: column;
   padding: 0 3px 3px 3px;
+  width: 80%;
+  margin: auto;
 }
 
 #fullName {
@@ -199,9 +200,12 @@ footer p {
 
 #firstName {
   margin-right: 15px;
+  width: 85%;
 }
 
-
+#lastName {
+  width: 85%;
+}
 
 #firstName,
 #lastName,
@@ -227,10 +231,13 @@ footer p {
 /*////Portfolio//////////////////*/
 
 .portfolio {
+  display: flex;
   flex: 1;
+  flex-direction: column;
   background-color: #202020;
   font-family: 'Audiowide', Helvetica, sans-serif;
   font-size: 2.5em;
+  height: 81vh;
 }
 
 .portfolio h1,
@@ -245,8 +252,6 @@ footer p {
 }
 
 .star {
-  width: 100%;
-  height: 100%;
   position: relative;
   animation: star 300ms infinite;
   animation-timing-function: ease-out;
@@ -265,7 +270,8 @@ footer p {
 /*/////////////////////////////*/
 
 .services {
-  height: 100%;
+  height: 81vh;
+  display: flex;
 }
 
 .survey {
@@ -403,7 +409,7 @@ footer p {
   }
 
   .main-h1 {
-    margin: 0;
+    flex-direction: row;  
   }
 
 /*////Navigation//////////////////*/
@@ -432,6 +438,12 @@ footer p {
     width: 60%;
   }
 
+/*////Contact//////////////////*/
+
+  .contact-form {
+    width: 100%;
+  }
+
 }
 
 /*////////////////////////////////*/
@@ -445,7 +457,6 @@ footer p {
   .main-header {
     flex-direction: row;
     justify-content: space-around;
-    padding: 1em 0;
   }
 
   .main-h1 {
@@ -494,6 +505,10 @@ footer p {
     display: flex;
     width: 80%;
     justify-content: space-between;
+  }
+
+  .footLinks {
+    margin-top: 5px;
   }
 
   footer p,
