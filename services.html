@@ -11,7 +11,7 @@
   <body>
     <!-- Main Header and Navigation -->
     <div class="wrapper">
-      <header class="main-header">
+      <header class="main-header star">
         
           <h1 class="main-h1">Electric<span>Goon</span></h1>
       
@@ -49,60 +49,70 @@
       <div>
         <form class="survey" action="services.html" method="post">
           <div id="surveyForm">
-            <h2>Questionnaire</h2>
-            <input type="text" placeholder="Name:"><br>
-            <input type="text" placeholder="Number:"><br>
-            <input type="text" placeholder="Email:"><br>
-            <button id="closeBtn" type="button" name="closer">Submit</button>
+              <div id="surveyWrap">
+            <h2>How can I reach you?</h2>
+              
+                
+                <input id="clientName" type="text" name="clientname" value="" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+               
+                <input type="text" placeholder="Number">
+                <input type="text" placeholder="Email">
+                <button id="closeBtn" type="button" name="closer">Next</button>
+                
+              </div>
           </div>
         </form>        
       </div>
       <div>
         <div id="questionOne">
           <div class="personalInfo">
-            <form action="services.html" method="POST">
-              <h3>What do you need?</h3>
-              <input type="checkbox" name="service1" value="website">Website
-              <input type="checkbox" name="service2" value="mobile-app">Mobile App
-              <input type="checkbox" name="service3" value="content-management">Content Management<br>
+            <form id="formNeeds" action="services.html" method="POST">
+              <h3 class="h3Forms">What do you need?</h3>
+              <div class="buttons">
+                <button id="website" type="button" name="Website">Website</button>
+                <button id="mobile" type="button" name="MobileApp">Mobile App</button>
+                <button id="content" type="button" name="ContentManage">Content Management</button>
+              </div>
             </form>
-            <button id="next1" type="button" name="next1">Next</button>
           </div>
         </div>
       </div>
       <div>
         <div id="questionTwo">
           <div class="serviceNeeds">
-            <form action="services.html" method="POST">
-              <h3>What will you use it for?</h3>
-              <input type="checkbox" name="option1" value="personal">Personal
-              <input type="checkbox" name="option2" value="professional">Professional
-              <input type="checkbox" name="option3" value="hobby">Hobby<br>
+            <form id="formUse" action="services.html" method="POST">
+              <h3 class="h3Forms">What will you use it for?</h3>
+              <div class="buttons">
+              <button id="personal" type="button" name="Personal">Personal</button>
+              <button id="professional" type="button" name="Professional">Professional</button>
+              <button id="hobby" type="button" name="Hobby">Hobby</button>
+              </div>
             </form>
-            <button id="next2" type="button" name="next1">Next</button>
           </div>
         </div>
       </div>
       <div>
         <div id="questionThree">
           <div class="serviceIntent">
-            <form action="services.html" method="POST">
-              <h3>Will you be selling anything?</h3>
-              <input type="checkbox" name="yes" value="yes">Product(s)
-              <input type="checkbox" name="no" value="no">Service(s)
-              <input type="checkbox" name="no" value="no">Nothing
+            <form id="formSells" action="services.html" method="POST">
+              <h3 class="h3Forms">Will you be selling anything?</h3>
+              <div class="buttons">
+              <button id="products" type="button" name="Producs">Product(s)</button>
+              <button id="serviceForSell" type="button" name="Service">Service(s)</button>
+              <button id="noSell" type="button" name="Nothing">Nothing</button>
+              </div>
             </form>
-            <button id="next3" type="button" name="next1">Next</button>
           </div>
         </div>
       </div>
       <div>
         <div id="closeMessage" action="services.html" method="post">      
-          <div class="wrapClose">
-            <p>
-              Thanks! You'll hear from me shortly.
+          <div class="wrapClose">          
+              <p>
+              I'll review your information and contact you shortly.
             </p>
-            <button id="closeSurvey" type="button" name="closebutton">Close</button>
+            <button id="closeSurvey" type="submit" name="closebutton">Close</button>           
           </div>
         </div>
       </div>

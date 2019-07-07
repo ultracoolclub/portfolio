@@ -8,6 +8,7 @@ var services = document.querySelectorAll('.survey');
 var closeMessage = document.querySelector('.wrapClose');
 var closeBtn = document.querySelector('#closeBtn');
 var contactName = document.getElementById('#name');
+var clientName = document.querySelector('#clientName');
 
 
 
@@ -36,17 +37,18 @@ $(document).ready(function () {
     $(".survey").hide();
     $("#questionOne").show();
   });
-  $("#next1").click(function () {
+  $("#website, #mobile, #content").click(function () {
     $("#questionOne").hide();
     $("#questionTwo").show();
   });
-  $("#next2").click(function () {
+  $("#personal, #professional, #hobby").click(function () {
     $("#questionTwo").hide();
     $("#questionThree").show();
   });
-  $("#next3").click(function () {
+  $("#products, #serviceForSell, #noSell").click(function () {
     $("#questionThree").hide();
     $("#closeMessage").show();
+    $("#closeMessage p").prepend("Thanks, " + clientName.value + "!");
   });
   $("#closeSurvey").click(function () {
     $("#closeMessage").hide();
