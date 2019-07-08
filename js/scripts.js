@@ -34,8 +34,16 @@ $(document).ready(function () {
     $(".survey").show();
   });
   $("#closeBtn").click(function () {
-    $(".survey").hide();
-    $("#questionOne").show();
+    var nameFirst = document.querySelector("#clientName").value;
+    var nameLast = document.querySelector("#clientLast").value;
+    var clientNumber = document.querySelector("#clientNumber").value;
+    var clientEmail = document.querySelector("#clientEmail").value;
+    if (nameFirst, nameLast, clientNumber, clientEmail == '') {
+      return false;
+    }else{
+      $(".survey").hide();
+      $("#questionOne").show();
+    };
   });
   $("#website, #mobile, #content").click(function () {
     $("#questionOne").hide();
