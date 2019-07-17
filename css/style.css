@@ -166,7 +166,6 @@ footer p {
 
 .footLinks {
   margin: auto;
-  margin-top: px;
   margin-left: 7.5px;
 }
 
@@ -182,7 +181,10 @@ footer p {
   background-color: #202020;
   font-family: 'Audiowide';
   height: 81vh;
+  overflow: hidden;
 }
+
+
 
 .contact-form {
   display: flex;
@@ -190,6 +192,7 @@ footer p {
   flex-direction: column;
   padding: 0 3px 3px 3px;
   width: 80%;
+  height: 100%;
   margin: auto;
 }
 
@@ -238,9 +241,9 @@ footer p {
   font-family: 'Audiowide', Helvetica, sans-serif;
   font-size: 2.5em;
   height: 81vh;
+  overflow: hidden;
 }
 
-.portfolio h1,
 .portfolio h2 {
   display: flex;
   color: #FFFFE0;
@@ -273,6 +276,7 @@ footer p {
   height: 81vh;
   display: flex;
   font-family: 'Audiowide';
+  overflow: hidden;
 }
 
 .survey {
@@ -292,7 +296,7 @@ footer p {
   flex-direction: column;
   background: salmon;
   width: 40%;
-  height: 30%;
+  height: 225px;
   margin: auto;
   margin-bottom: 25px;
   margin-top: 10%;
@@ -331,12 +335,14 @@ footer p {
 }
 
 .btnWrap {
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    margin-top: 50px;
-    padding-left: 60px;
-    font-family: 'Audiowide';
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 35vh;
+  margin: auto;
+  margin-top: 50px;
+  font-family: 'Audiowide';
+  align-items: center;
   }
 
 #paraServices {
@@ -345,6 +351,7 @@ footer p {
  
 #servicesBtn {
   background: #2988B8; 
+  width: 25%;
 }
 
 .personalInfo,
@@ -355,7 +362,7 @@ footer p {
   flex-direction: column;
   background: indianred;
   width: 40%;
-  height: 30%;
+  height: 225px;
   margin: auto;
   margin-bottom: 25px;
   margin-top: 10%;
@@ -475,12 +482,9 @@ footer p {
 
 /*////Services//////////////////*/
 
-  .services p {
-    width: 60%;
-  }
-
-  #servicesBtn {
-    width: 60%;
+  .btnWrap {
+    width: 80%;
+    font-size: 2em;
   }
 
 /*////Contact//////////////////*/
@@ -528,12 +532,10 @@ footer p {
   #servicesBtn {
     margin: auto;
     font-size: 20px;
-    width: 80%;
   }
 
   .services p {
     color: white;
-    width: 80%;
     margin-top: 75px;
   }
 
@@ -561,5 +563,81 @@ footer p {
     margin-left: 0;
     margin-right: 0;
   }
+
+}
+
+
+@media (max-height: 550px) {
+
+  .contact-form {
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .portfolio h2 {
+    font-size: 1em;
+  }
+
+  .contact-form {
+    height: 80%;
+  }
+
+  .contact-h2 {
+    font-size: 1em;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  #surveyForm,
+  .personalInfo,
+  .serviceNeeds,
+  .serviceIntent,
+  .wrapClose {
+    width: 85%;
+    height: 60%;
+  }
+
+  #surveyWrap {
+    width: 80%;
+  }
+
+  #closeBtn {
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  #website,
+  #mobile,
+  #content,
+  #personal,
+  #professional,
+  #hobby,
+  #products,
+  #serviceForSell,
+  #noSell {
+  margin-top: 5px;
+  width: 60%;
+  height: 40px;
+  font-size: .75em;
+  font: bold;
+}
+
+#formNeeds,
+#formUse,
+#formSells {
+  width: 80%;
+}
+
+.buttons {
+  flex-direction: column;
+  width: 80%;
+  margin-left: 55px;
+}
+
+#closeMessage p {
+  width: 90%;
+}
 
 }

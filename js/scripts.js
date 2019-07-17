@@ -27,6 +27,18 @@ $(document).ready(function () {
 /*///////////////////////////////////////////////////////////////////////////////////////////*/
 /*////Allows popup survey to appear when "questionnaire" button is pressed//////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////////////////*/
+var i = 0;
+$(document).ready(function () {
+  var clientNumber = document.querySelector("#clientNumber").value;
+  $('#clientNumber').keypress(function() {
+    i += 1;
+    console.log(i)
+    if (i == 1) {
+      $("#clientNumber").val("(");
+      };
+  });
+});
+
 
 
 $(document).ready(function () {
@@ -38,9 +50,17 @@ $(document).ready(function () {
     var nameLast = document.querySelector("#clientLast").value;
     var clientNumber = document.querySelector("#clientNumber").value;
     var clientEmail = document.querySelector("#clientEmail").value;
-    if (nameFirst, nameLast, clientNumber, clientEmail == '') {
+    var regExpressNumber = /^\((\d{3})\)(\d{3})-(\d{4})$/;
+    var regExpressEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var error1 = document.querySelector("#error1");
+
+    if (nameFirst && nameLast && clientNumber && clientEmail == '') {
       return false;
-    }else{
+    } else if (!(clientNumber).match(regExpressNumber)) {
+      return false;
+    } else if (!(clientEmail).match(regExpressEmail)) {
+      return false;
+    } else{
       $(".survey").hide();
       $("#questionOne").show();
     };
