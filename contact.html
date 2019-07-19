@@ -12,24 +12,25 @@
     <!-- Main Header and Navigation -->
     <div class="wrapper">
       <header class="main-header">
-        <h1 class="main-h1">Electric<span>Goon</span></h1>
-      
+        <h1 class="main-h1">Electric<span>Goon</span></h1>      
           <nav class="main-nav">
+            <!-- This is the dropdown nav that appears when width is under 700px.-->
             <div class="dropMenu">
               <div class="navIcon">&#9776; Menu</div>
-              <ul class="navigation">
+                <ul class="navigation">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <!-- This is the nav that appears in the header when width is above 700px.-->
+              <ul class="navigationLarge">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
-              </div>
-            <ul class="navigationLarge">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
           </nav>
        
       </header>
@@ -42,8 +43,8 @@
             
             <h2 id="contact-h2">You can reach me here:</h2>
             <div id="fullName">
-            <input type="text" id="firstName" name="firstname" value="" placeholder="First Name">
-            <input type="text" id="lastName" name="lastname" value="" placeholder="Last Name"><br>
+              <input type="text" id="firstName" name="firstname" value="" placeholder="First Name">
+              <input type="text" id="lastName" name="lastname" value="" placeholder="Last Name"><br>
             </div><br>
             <input type="text" id="email" name="email" value="" placeholder="Email"><br>
             <textarea id="message" name="message" rows="5" cols="33" placeholder="Message"></textarea><br>

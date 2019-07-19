@@ -11,20 +11,20 @@
   <body>
     <!-- Main Header and Navigation -->
     <div class="wrapper">
-      <header class="main-header">
-        
-          <h1 class="main-h1">Electric<span>Goon</span></h1>
-      
+      <header class="main-header">       
+          <h1 class="main-h1">Electric<span>Goon</span></h1>     
           <nav class="main-nav">
+            <!-- This is the dropdown nav that appears when width is under 700px.-->
             <div class="dropMenu">
-            <div class="navIcon">&#9776; Menu</div>
-            <ul class="navigation">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
+              <div class="navIcon">&#9776; Menu</div>
+                <ul class="navigation">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
+            <!-- This is the nav that appears in the header when width is above 700px.-->
             <ul class="navigationLarge">
               <li><a href="index.html">Home</a></li>
               <li><a href="portfolio.html">Portfolio</a></li>
@@ -38,7 +38,10 @@
     <!-- Services -->
 
     <div class="services">
+
+      <!-- This is the paragraph and "survey" button on the page.-->
       <div class="btnWrap">
+
         <p id="paraServices">
           Let me build your website. To get started, click the button 
           below and answer a few questions. 
@@ -46,13 +49,14 @@
         
         <button id="servicesBtn" type="button" name="button">Survey</button>
       </div>
+
+      <!-- This is the first modal that drops down after the "survey" button is clicked.-->
       <div>
         <form class="survey" action="services.html" method="post">
           <div id="surveyForm">
               <div id="surveyWrap">
             <h2>How can I reach you?</h2>
-              
-                
+                              
                 <input id="clientName" type="text" name="clientname" value="" placeholder="First Name">
                 <input id="clientLast" type="text" placeholder="Last Name">              
                 <input id="clientNumber" type="text" placeholder="(   )   -">
@@ -66,6 +70,8 @@
           </div>
         </form>        
       </div>
+
+      <!-- This is the second modal.-->
       <div>
         <div id="questionOne">
           <div class="personalInfo">
@@ -80,6 +86,8 @@
           </div>
         </div>
       </div>
+
+      <!-- This is the third modal.-->
       <div>
         <div id="questionTwo">
           <div class="serviceNeeds">
@@ -94,6 +102,8 @@
           </div>
         </div>
       </div>
+
+      <!-- This is the fourth modal.-->
       <div>
         <div id="questionThree">
           <div class="serviceIntent">
@@ -108,10 +118,12 @@
           </div>
         </div>
       </div>
+
+      <!-- This is the fifth modal, which allows the user to close the survey.-->
       <div>
         <div id="closeMessage" action="services.html" method="post">      
           <div class="wrapClose">          
-              <p>
+            <p>
               I'll review your information and contact you shortly.
             </p>
             <button id="closeSurvey" type="submit" name="closebutton">Close</button>           
@@ -120,6 +132,7 @@
       </div>
     </div>
 
+    <!-- Footer-->
     <div class="foot-container">      
       <footer>
         <div class="footWrap">

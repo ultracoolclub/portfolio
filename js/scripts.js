@@ -1,17 +1,5 @@
 var contactSubmit = document.querySelector('#contactButton');
-var contactInfo = document.querySelector('form');
-var servicesBtn = document.querySelector('#servicesBtn');
-var mainHeader = document.querySelector('.wrapper');
-var h1Services = document.querySelector('.services p');
-var footer = document.querySelector('.foot-container');
-var services = document.querySelectorAll('.survey');
-var closeMessage = document.querySelector('.wrapClose');
-var closeBtn = document.querySelector('#closeBtn');
-var contactName = document.getElementById('#name');
 var clientName = document.querySelector('#clientName');
-
-
-
 
 
 /*////////////////////////////////////////////////////////*/
@@ -25,20 +13,8 @@ $(document).ready(function () {
 });
 
 /*///////////////////////////////////////////////////////////////////////////////////////////*/
-/*////Allows popup survey to appear when "questionnaire" button is pressed//////////////////*/
+/*////Allows popup survey to appear when "Survey" button is pressed//////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////////////////*/
-var i = 0;
-$(document).ready(function () {
-  var clientNumber = document.querySelector("#clientNumber").value;
-  $('#clientNumber').keypress(function() {
-    i += 1;
-    console.log(i)
-    if (i == 1) {
-      $("#clientNumber").val("(");
-      };
-  });
-});
-
 
 
 $(document).ready(function () {
@@ -83,10 +59,30 @@ $(document).ready(function () {
   });
 });
 
+/*////Autofills parentheses and hyphen in phone number//////////////////*/
 
-
-
-
+var i = 0;
+$(document).ready(function () {
+  $('#clientNumber').keypress(function () {
+    i += 1;
+    console.log(i)
+    if (i == 1) {
+      $("#clientNumber").val(function (n, c) {
+        return c + "(";
+      });
+    };
+    if (i == 4) {
+      $("#clientNumber").val(function (n, c) {
+        return c + ")";
+      });
+    };
+    if (i == 7) {
+      $("#clientNumber").val(function (n, c) {
+        return c + "-";
+      });
+    };
+  });
+});
 
 
 /*/////////////////////////////////////////////////////////////////////*/
