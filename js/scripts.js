@@ -30,7 +30,12 @@ $(document).ready(function () {
     var regExpressEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     var error1 = document.querySelector("#error1");
 
-    if (nameFirst && nameLast && clientNumber && clientEmail == '') {
+    if (nameFirst == '') {
+      error1.innerHTML = "* All fields are required.";
+      error1.style.backgroundColor = "#232323";
+      error1.style.color = "#fff";
+      return false;
+    } else if (nameLast == '') {
       return false;
     } else if (!(clientNumber).match(regExpressNumber)) {
       return false;
@@ -67,22 +72,35 @@ $(document).ready(function () {
     i += 1;
     console.log(i)
     if (i == 1) {
-      $("#clientNumber").val(function (n, c) {
-        return c + "(";
+      $("#clientNumber").val(function (n, digi) {
+        return digi + "(";
       });
     };
     if (i == 4) {
-      $("#clientNumber").val(function (n, c) {
-        return c + ")";
+      $("#clientNumber").val(function (n, digi) {
+        return digi + ")";
       });
     };
     if (i == 7) {
-      $("#clientNumber").val(function (n, c) {
-        return c + "-";
+      $("#clientNumber").val(function (n, digi) {
+        return digi + "-";
       });
     };
   });
 });
+
+
+$(document).ready(function () {
+  $("#clientNumber").on("keydown", function (event) {
+    var x = event.which;
+    if (x == 8) {
+        $("#clientNumber").val('');
+        i = 0;
+        console.log(i);
+    };
+  });
+});
+
 
 
 /*/////////////////////////////////////////////////////////////////////*/
@@ -95,9 +113,7 @@ function insertName() {
   var unoName = document.querySelector('#firstName').value;
   var contactMessage = "Thanks, " + unoName + ". You'll hear from me shortly.";
   document.querySelector("form").style.color = "white";
-
-  document.querySelector("form").innerHTML = contactMessage;
-  
+  document.querySelector("form").innerHTML = contactMessage; 
 }
 
 contactSubmit.addEventListener('click', insertName);
