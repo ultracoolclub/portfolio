@@ -6,7 +6,7 @@ The index.html page displays a photograph relevant to the theme of "ElectricGoon
 
 The navigation bar will convert into a drop down menu when a page is less than 700 pixels. A jQuery function creates the toggle effect. I originally attempted to use a hover effect in CSS. However, this created a "sticky hover" in mobile formats, so I decided to use jQuery instead. 
 
-The survey on the services.html page utilizes jQuery in order to access the survey. The survey is a series of modals that appear and disappear as the user answers questions. I used regular expressions to validate the phone number and email on the contact information section.  
+The survey on the services.html page utilizes jQuery in order to access the survey. The survey is a series of modals that appear and disappear as the user answers questions. I used regular expressions to validate the phone number and email on the contact information section. I haven't worked it out completely, so to simplify it in the present I wrote a function that sets the counter to 0 and input value to '' when backspace is pressed in the phone number field.  
 
 Finally, the contact page uses vanilla javascript to give functionality to the submit button. When you enter your first name and submit the form, your name will appear in a thank-you message. I built it before I reached the jQuery tutorials in Treehouse or else I would have probably used jQuery again. 
 
