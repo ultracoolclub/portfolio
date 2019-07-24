@@ -257,10 +257,20 @@ footer p {
 .star {
   position: relative;
   animation: star 300ms infinite;
+  -webkit-animation: star 300ms infinite;
   animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
 }
 
 @keyframes star {
+  0% {background: #2988B8;}
+  25% {background: teal;}
+  50% {background: navajowhite;}
+  75% {background: indianred;}
+  100% {background: #2988B8;}
+}
+
+@-webkit-keyframes star {
   0% {background: #2988B8;}
   25% {background: teal;}
   50% {background: navajowhite;}
@@ -302,7 +312,9 @@ footer p {
   margin-top: 10%;
   box-shadow: 0 0 15px rgba(34,34,34,.8);
   animation-name: survey;
+  -webkit-animation-name: survey;
   animation-duration:1.5s;
+  -webkit-animation-duration: 1.5s;
   font-size: .75em;
 }
 
@@ -331,6 +343,11 @@ footer p {
 }
 
 @keyframes survey {
+  from { transform: translateY(-900px)}
+  to { transform: translateY(0)}
+}
+
+@-webkit-keyframes survey {
   from { transform: translateY(-900px)}
   to { transform: translateY(0)}
 }
@@ -368,12 +385,19 @@ footer p {
   margin-bottom: 25px;
   margin-top: 10%;
   box-shadow: 0 0 15px rgba(34,34,34,1);
+  -webkit-animation-name: modalTwo;
   animation-name: modalTwo;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   border-radius: 5px;
 }
 
 @keyframes modalTwo {
+  from { top: 500px; opacity: 0;}
+  to { top: 0; opacity: 1;}
+}
+
+@-webkit-keyframes modalTwo {
   from { top: 500px; opacity: 0;}
   to { top: 0; opacity: 1;}
 }
