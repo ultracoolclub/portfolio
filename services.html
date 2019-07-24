@@ -59,13 +59,14 @@
                               
                 <input id="clientName" type="text" name="clientname" value="" placeholder="First Name">
                 <input id="clientLast" type="text" placeholder="Last Name">              
-                <input id="clientNumber" type="text" placeholder="(   )   -">
+                <input id="clientNumber" type="text" placeholder="Number">
                 <input id="clientEmail" type="text" placeholder="Email">
-                <span id="error1" aria-live="polite"></span>
-                <span id="errorNumber" aria-live="polite"></span>
-                <span id="errorEmail" aria-live="polite"></span>
                 <button id="closeBtn" type="button" name="closer">Next</button>
-                
+                <span class="error1" aria-live="polite">
+                  * All fields are required.<br>
+                  * Numbers must contain 10 digits.<br>
+                  * Valid email required.
+                </span>
               </div>
           </div>
         </form>        

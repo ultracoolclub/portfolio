@@ -28,18 +28,19 @@ $(document).ready(function () {
     var clientEmail = document.querySelector("#clientEmail").value;
     var regExpressNumber = /^\((\d{3})\)(\d{3})-(\d{4})$/;
     var regExpressEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    var error1 = document.querySelector("#error1");
+    var error1 = document.querySelector(".error1");
 
     if (nameFirst == '') {
-      error1.innerHTML = "* All fields are required.";
-      error1.style.backgroundColor = "#232323";
-      error1.style.color = "#fff";
+      error1.style.display = "block";
       return false;
     } else if (nameLast == '') {
+        error1.style.display = "block";
       return false;
     } else if (!(clientNumber).match(regExpressNumber)) {
+        error1.style.display = "block";
       return false;
     } else if (!(clientEmail).match(regExpressEmail)) {
+        error1.style.display = "block";
       return false;
     } else{
       $(".survey").hide();
