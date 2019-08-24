@@ -10,4 +10,3 @@ The survey on the services.html page utilizes jQuery in order to access the surv
 
 Finally, the contact page uses vanilla javascript to give functionality to the submit button. When you enter your first name and submit the form, your name will appear in a thank-you message. I built it before I reached the jQuery tutorials in Treehouse or else I would have probably used jQuery again. 
 
-That's it. That's my first website. Thanks to Brian and all of the Code Louisville staff and mentors for helping me get here. 
